@@ -1,0 +1,8 @@
+.DS_Store
+Thumbs.db
+*.log
+.vercel
+node_modules/
+
+# Enunciado / guía del curso (no versionar)
+instrucciones.md

@@ -1,0 +1,10 @@
+{
+  "name": "maquina-goldberg-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Simulación web (HTML/CSS) — Máquina de Goldberg: secuencia, diagrama y explicación",
+  "scripts": {
+    "start": "npx --yes serve . -p 3000",
+    "test": "node tests/goldberg-simulation.test.js && node tests/scene-css.test.js"
+  }
+}

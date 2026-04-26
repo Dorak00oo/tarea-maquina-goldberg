@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Explicación — Máquina de Goldberg</title>
+  <link rel="stylesheet" href="assets/css/base/tokens.css" />
+  <link rel="stylesheet" href="assets/css/base/reset.css" />
+  <link rel="stylesheet" href="assets/css/base/layout.css" />
+  <link rel="stylesheet" href="assets/css/components/nav.css" />
+  <link rel="stylesheet" href="assets/css/pages/explicacion.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <span class="brand">Máquina de Goldberg · Encender luz</span>
+      <nav class="nav-links" aria-label="Secciones">
+        <a href="index.html">Secuencia</a>
+        <a href="diagrama.html">Diagrama</a>
+        <a href="explicacion.html" aria-current="page">Explicación</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Explicación del funcionamiento</h1>
+    <p class="lead">
+      Descripción de cada etapa y cómo encadena la energía mecánica hasta
+      encender un <strong>LED</strong>. Cumple: mínimo
+      <strong>7 pasos</strong> y mínimo <strong>8 tipos de movimiento</strong>
+      integrados, según la guía del proyecto.
+    </p>
+
+    <div class="explain-block">
+      <h3>Etapa 1 — Riel (rectilíneo y deslizante)</h3>
+      <p>
+        Un cuerpo con poca fricción se mueve sobre rieles: la traslación
+        aproximadamente <strong>rectilínea</strong> y el contacto
+        <strong>deslizante</strong> aprovechan la gravedad o un ligero
+        desnivel. Al llegar al tope, cede mecánicamente el siguiente
+        mecanismo.
+      </p>
+    </div>
+
+    <div class="explain-block">
+      <h3>Etapa 2 — Peso (caída libre)</h3>
+      <p>
+        Al liberarse, un bloque o contrapeso cae         con aceleración de gravedad aproximada, es decir
+        <strong>caída libre</strong> mientras el aire
+        aporta rozamiento mínimo. Esa energía potencial se transforma en
+        cinética y empuja a la canica a la pista.
+      </p>
+    </div>
+
+    <div class="explain-block">
+      <h3>Etapa 3 — Rampa (movimiento acelerado)</h3>
+      <p>
+        Sobre un plano inclinado, la componente de la gravedad paralela al
+        suelo hace posible un <strong>movimiento con aceleración</strong> casi
+        constante. La canica toma rapidez antes de entrar a la curva.
+      </p>
+    </div>
+
+    <div class="explain-block">
+      <h3>Etapa 4 — Curva (circular en la pista)</h3>
+      <p>
+        Un tramo de pista forza una
+        <strong>trayectoria circular o curvada</strong>: la canica
+        experimenta aceleración centrípeta (canal a la pista) y mantiene
+        alineada la “historia” de la cadena hacia el péndulo.
+      </p>
+    </div>
+
+    <div class="explain-block">
+      <h3>Etapa 5 — Péndulo (oscilatorio)</h3>
+      <p>
+        El choque cede impulso a un péndulo: entra en
+        <strong>oscilación</strong> (movimiento periódico alrededor del
+        equilibrio). Al pasar, el brazo del péndulo actúa sobre el
+        engranaje.
+      </p>
+    </div>
+
+    <div class="explain-block">
+      <h3>Etapa 6 — Engrane (rotacional)</h3>
+      <p>
+        Un piñón o rueda dentada
+        <strong>rota alrededor de su eje</strong> (rotación rígida), amplificando
+        el desplazamiento angular para tensar o preparar un mecanismo de
+        disparo (resorte / pestillo).
+      </p>
+    </div>
+
+    <div class="explain-block">
+      <h3>Etapa 7 — Resorte, rebote, parabólico e interruptor</h3>
+      <p>
+        Un muelle acumula energía y, al soltarse, exhibe
+        <strong>movimiento armónico simple</strong> o impulso brusco. La
+        canica puede
+        <strong>rebotar</strong> en una superficie y luego, en vuelo con
+        velocidad inicial horizontal o inclinada, seguir un arco
+        <strong>parabólico</strong> bajo gravedad hasta golpear un
+        interruptor. El cierre eléctrico
+        <strong>enciende el LED</strong>.
+      </p>
+    </div>
+
+    <h2>Requisitos del proyecto (checklist)</h2>
+    <ul class="check">
+      <li>Objetivo: encender un indicador (luz/LED).</li>
+      <li>Al menos 7 pasos en secuencia: cubiertos (1 a 7).</li>
+      <li>
+        8+ tipos de movimiento: rectilíneo, deslizante, caída libre, acelerado
+        en rampa, circular, oscilatorio, rotacional, MAS, rebote, parabólico
+        (listados a lo largo de las etapas).
+      </li>
+      <li>
+        Simulación en Algodoo: reproducir con rigidez, fricción y cuerpos
+        análogos a cada bloque (pendiente, engrane, muelle, etc.).
+      </li>
+    </ul>
+  </main>
+
+  <footer class="site-footer">
+    <a href="diagrama.html">← Diagrama</a> ·
+    <a href="index.html">Secuencia</a>
+  </footer>
+</body>
+</html>

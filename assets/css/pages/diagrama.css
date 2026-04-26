@@ -1,0 +1,27 @@
+.diagram-wrap {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  overflow: auto;
+}
+
+.diagram-wrap svg {
+  width: 100%;
+  height: auto;
+  max-width: 52rem;
+  margin: 0 auto;
+}
+
+.diagram-legend {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  font-size: 0.95rem;
+}
+
+.diagram-legend li {
+  list-style: none;
+  padding-left: 0.5rem;
+  border-left: 2px solid var(--border);
+}

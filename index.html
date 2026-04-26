@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Secuencia — Máquina de Goldberg</title>
+  <link rel="stylesheet" href="assets/css/base/tokens.css" />
+  <link rel="stylesheet" href="assets/css/base/reset.css" />
+  <link rel="stylesheet" href="assets/css/base/layout.css" />
+  <link rel="stylesheet" href="assets/css/components/nav.css" />
+  <link rel="stylesheet" href="assets/css/components/cards.css" />
+  <link rel="stylesheet" href="assets/css/sections/scene.css" />
+  <link rel="stylesheet" href="assets/css/sections/sequence.css" />
+  <link rel="stylesheet" href="assets/css/pages/index.css" />
+</head>
+<body class="page-index">
+  <header class="site-header">
+    <div class="nav-inner">
+      <span class="brand">Máquina de Goldberg · Encender luz</span>
+      <nav class="nav-links" aria-label="Secciones">
+        <a href="index.html" aria-current="page">Secuencia</a>
+        <a href="diagrama.html">Diagrama</a>
+        <a href="explicacion.html">Explicación</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Secuencia de la máquina</h1>
+
+    <section class="scene panel" aria-label="Simulación animada (estilo Goldberg)">
+      <div class="scene-stage" aria-hidden="true">
+        <div class="stage-label" data-stage-label>Preparando la secuencia...</div>
+        <div class="track rail"></div>
+        <div class="track drop-track"></div>
+        <div class="track ramp"></div>
+        <div class="track curve"></div>
+        <div class="weight" title="Contrapeso"></div>
+        <div class="pendulum">
+          <span class="pendulum-arm"></span>
+          <span class="pendulum-bob"></span>
+        </div>
+        <div class="transfer-guide"></div>
+        <div class="gear" title="Engrane"></div>
+        <div class="spring" title="Resorte"></div>
+        <div class="launch-arc"></div>
+        <div class="rebound-pad"></div>
+        <div class="switch" title="Interruptor"></div>
+        <div class="led" title="LED"></div>
+        <div class="impact impact-pendulum"></div>
+        <div class="impact impact-switch"></div>
+        <div class="ball" title="Canica"></div>
+      </div>
+      <p class="scene-caption">
+        Simulación animada con choques y reacciones aproximadas. La explicación está en la pestaña <strong>Explicación</strong>.
+      </p>
+      <div class="scene-controls">
+        <button class="btn" type="button" id="btn-restart">Reiniciar</button>
+        <button class="btn" type="button" id="btn-pause">Pausar/Reanudar</button>
+      </div>
+    </section>
+
+    <section class="sequence" aria-label="Pasos de la secuencia">
+      <article class="step" data-step="1">
+        <span class="step-num" aria-hidden="true">1</span>
+        <div class="step-body">
+          <h3>Arranque en carril</h3>
+          <span class="tag">Rectilíneo · Deslizante</span>
+        </div>
+      </article>
+
+      <article class="step" data-step="2">
+        <span class="step-num" aria-hidden="true">2</span>
+        <div class="step-body">
+          <h3>Transferencia a la torre</h3>
+          <span class="tag">Caída libre</span>
+        </div>
+      </article>
+
+      <article class="step" data-step="3">
+        <span class="step-num" aria-hidden="true">3</span>
+        <div class="step-body">
+          <h3>Descenso por la rampa helicoidal</h3>
+          <span class="tag">Movimiento acelerado (rampa)</span>
+        </div>
+      </article>
+
+      <article class="step" data-step="4">
+        <span class="step-num" aria-hidden="true">4</span>
+        <div class="step-body">
+          <h3>Curva cerrada y salida</h3>
+          <span class="tag">Movimiento circular (trayectoria)</span>
+        </div>
+      </article>
+
+      <article class="step" data-step="5">
+        <span class="step-num" aria-hidden="true">5</span>
+        <div class="step-body">
+          <h3>Choque al péndulo</h3>
+          <span class="tag">Movimiento oscilatorio (péndulo)</span>
+        </div>
+      </article>
+
+      <article class="step" data-step="6">
+        <span class="step-num" aria-hidden="true">6</span>
+        <div class="step-body">
+          <h3>Engrane y eje</h3>
+          <span class="tag">Movimiento rotacional</span>
+        </div>
+      </article>
+
+      <article class="step" data-step="7">
+        <span class="step-num" aria-hidden="true">7</span>
+        <div class="step-body">
+          <h3>Resorte, rebote y disparo al interruptor</h3>
+          <span class="tag">M.A.S. · Rebote · Parabólico</span>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    Proyecto Máquina de Goldberg — simulación web (HTML/CSS) ·
+    <a href="diagrama.html">Ver diagrama</a>
+  </footer>
+
+  <script src="assets/js/goldberg-simulation.js"></script>
+</body>
+</html>
