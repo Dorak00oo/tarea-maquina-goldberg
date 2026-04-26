@@ -25,83 +25,92 @@
   <main>
     <h1>Explicación del funcionamiento</h1>
     <p class="lead">
-      Descripción de cada etapa y cómo encadena la energía mecánica hasta
-      encender un <strong>LED</strong>. Cumple: mínimo
-      <strong>7 pasos</strong> y mínimo <strong>8 tipos de movimiento</strong>
-      integrados, según la guía del proyecto.
+      Descripción de la secuencia actual de la simulación: la canica avanza,
+      cae, desciende por rampa, toma una curva y transfiere energía al sistema
+      péndulo → engrane → resorte hasta encender un <strong>LED</strong>.
+      Cumple mínimo <strong>7 pasos</strong> y más de
+      <strong>8 tipos de movimiento</strong>.
     </p>
+
+    <section class="flow-summary" aria-label="Resumen de flujo">
+      <article>
+        <strong>Ruta corregida</strong>
+        <span>Riel → caída vertical → rampa descendente → curva → péndulo → engrane → resorte → LED</span>
+      </article>
+      <article>
+        <strong>Meta física</strong>
+        <span>Mostrar contactos visibles y transferencia de energía entre mecanismos.</span>
+      </article>
+    </section>
 
     <div class="explain-block">
       <h3>Etapa 1 — Riel (rectilíneo y deslizante)</h3>
       <p>
-        Un cuerpo con poca fricción se mueve sobre rieles: la traslación
-        aproximadamente <strong>rectilínea</strong> y el contacto
-        <strong>deslizante</strong> aprovechan la gravedad o un ligero
-        desnivel. Al llegar al tope, cede mecánicamente el siguiente
-        mecanismo.
+        La canica inicia sobre un riel inclinado. Su trayectoria es
+        principalmente <strong>rectilínea</strong> y el contacto con la guía
+        representa un movimiento <strong>deslizante</strong>. El riel entrega la
+        canica justo a la guía vertical de la siguiente etapa.
       </p>
     </div>
 
     <div class="explain-block">
-      <h3>Etapa 2 — Peso (caída libre)</h3>
+      <h3>Etapa 2 — Guía vertical y peso (caída libre)</h3>
       <p>
-        Al liberarse, un bloque o contrapeso cae         con aceleración de gravedad aproximada, es decir
-        <strong>caída libre</strong> mientras el aire
-        aporta rozamiento mínimo. Esa energía potencial se transforma en
-        cinética y empuja a la canica a la pista.
+        La canica baja casi en línea recta por una sección vertical, sincronizada
+        con el contrapeso. Este tramo representa la <strong>caída libre</strong>:
+        la posición vertical cambia con rapidez creciente mientras el
+        desplazamiento horizontal se mantiene mínimo.
       </p>
     </div>
 
     <div class="explain-block">
-      <h3>Etapa 3 — Rampa (movimiento acelerado)</h3>
+      <h3>Etapa 3 — Rampa descendente (movimiento acelerado)</h3>
       <p>
         Sobre un plano inclinado, la componente de la gravedad paralela al
-        suelo hace posible un <strong>movimiento con aceleración</strong> casi
-        constante. La canica toma rapidez antes de entrar a la curva.
+        canal produce un <strong>movimiento acelerado</strong>. En la simulación
+        la canica desciende por la rampa, por eso gana rapidez de forma
+        congruente antes de entrar al canal curvo.
       </p>
     </div>
 
     <div class="explain-block">
-      <h3>Etapa 4 — Curva (circular en la pista)</h3>
+      <h3>Etapa 4 — Canal curvo (movimiento circular)</h3>
       <p>
-        Un tramo de pista forza una
-        <strong>trayectoria circular o curvada</strong>: la canica
-        experimenta aceleración centrípeta (canal a la pista) y mantiene
-        alineada la “historia” de la cadena hacia el péndulo.
+        La pista curva funciona como un canal que redirige la canica sin hacerla
+        saltar. En este punto aparece una <strong>trayectoria circular</strong>
+        o curvada: el canal cambia la dirección del movimiento y alinea la
+        salida con el péndulo.
       </p>
     </div>
 
     <div class="explain-block">
       <h3>Etapa 5 — Péndulo (oscilatorio)</h3>
       <p>
-        El choque cede impulso a un péndulo: entra en
-        <strong>oscilación</strong> (movimiento periódico alrededor del
-        equilibrio). Al pasar, el brazo del péndulo actúa sobre el
-        engranaje.
+        Al salir del canal, la canica golpea la masa del péndulo. Ese contacto
+        transfiere impulso y el péndulo entra en <strong>movimiento
+        oscilatorio</strong> alrededor de su punto de suspensión. La oscilación
+        empuja la guía que conduce hacia el engrane.
       </p>
     </div>
 
     <div class="explain-block">
-      <h3>Etapa 6 — Engrane (rotacional)</h3>
+      <h3>Etapa 6 — Engrane y guía de transferencia (rotacional)</h3>
       <p>
-        Un piñón o rueda dentada
-        <strong>rota alrededor de su eje</strong> (rotación rígida), amplificando
-        el desplazamiento angular para tensar o preparar un mecanismo de
-        disparo (resorte / pestillo).
+        La energía pasa desde la guía de transferencia hasta una rueda dentada.
+        El engrane <strong>rota alrededor de su eje</strong> y convierte el
+        contacto lineal en movimiento angular. Esa rotación comprime el resorte
+        que prepara el disparo final.
       </p>
     </div>
 
     <div class="explain-block">
       <h3>Etapa 7 — Resorte, rebote, parabólico e interruptor</h3>
       <p>
-        Un muelle acumula energía y, al soltarse, exhibe
-        <strong>movimiento armónico simple</strong> o impulso brusco. La
-        canica puede
-        <strong>rebotar</strong> en una superficie y luego, en vuelo con
-        velocidad inicial horizontal o inclinada, seguir un arco
-        <strong>parabólico</strong> bajo gravedad hasta golpear un
-        interruptor. El cierre eléctrico
-        <strong>enciende el LED</strong>.
+        El resorte se comprime y luego libera energía, lo que representa
+        <strong>movimiento armónico simple</strong> simplificado. La canica sale
+        impulsada, toca una superficie de <strong>rebote</strong> y sigue un
+        arco <strong>parabólico</strong> hasta presionar el interruptor. Al
+        cerrarse el contacto, el <strong>LED se enciende</strong>.
       </p>
     </div>
 
@@ -115,8 +124,9 @@
         (listados a lo largo de las etapas).
       </li>
       <li>
-        Simulación en Algodoo: reproducir con rigidez, fricción y cuerpos
-        análogos a cada bloque (pendiente, engrane, muelle, etc.).
+        La página web usa una simulación JS aproximada para mostrar posiciones,
+        contactos y reacciones; en Algodoo se puede reproducir con cuerpos
+        rígidos, fricción, pivote, engrane y resorte.
       </li>
     </ul>
   </main>

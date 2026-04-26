@@ -25,204 +25,118 @@
   <main>
     <h1>Diagrama del sistema</h1>
     <p class="lead">
-      Esquema de las etapas (de izquierda a derecha) y el tipo de movimiento
-      asociado a cada transición, hasta el LED.
+      Esquema físico de la ruta actual: riel, caída vertical, rampa
+      descendente, curva tipo canal y transferencia péndulo → engrane →
+      resorte → interruptor.
     </p>
 
     <div class="diagram-wrap">
       <svg
-        viewBox="0 0 720 280"
+        viewBox="0 0 900 360"
         xmlns="http://www.w3.org/2000/svg"
         role="img"
         aria-labelledby="diagTitle diagDesc"
       >
-        <title id="diagTitle">Diagrama de bloques Máquina de Goldberg</title>
+        <title id="diagTitle">Diagrama físico Máquina de Goldberg</title>
         <desc id="diagDesc">
-          Siete cajas numeradas en fila, de paso 1 a paso 7, y un LED al final
+          Diagrama de la ruta corregida de la canica y los mecanismos hasta encender el LED
         </desc>
         <defs>
-          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" style="stop-color: #1a222d" />
-            <stop offset="100%" style="stop-color: #0f1419" />
+          <linearGradient id="track" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#e8a23c" />
+            <stop offset="100%" stop-color="#c97d20" />
           </linearGradient>
-          <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+          <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#a9b6c5" />
+            <stop offset="100%" stop-color="#4d5d70" />
+          </linearGradient>
+          <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
             <feDropShadow
               dx="0"
-              dy="1"
-              stdDeviation="2"
+              dy="4"
+              stdDeviation="5"
               flood-color="#000"
-              flood-opacity="0.4"
+              flood-opacity="0.38"
             />
           </filter>
         </defs>
-        <rect width="720" height="280" fill="#0f1419" />
-        <text x="360" y="28" text-anchor="middle" fill="#e8a23c" font-size="16" font-weight="700">
-          Flujo de la máquina (7 pasos → LED)
+        <rect width="900" height="360" rx="12" fill="#0f1419" />
+        <text x="450" y="30" text-anchor="middle" fill="#e8a23c" font-size="18" font-weight="700">
+          Flujo físico de la máquina (7 pasos → LED)
         </text>
-        <!-- pasos 1-7 cajas -->
-        <g font-family="Segoe UI, sans-serif" font-size="9" fill="#8b9aab">
-          <!-- 1 -->
-          <rect
-            x="20"
-            y="55"
-            width="85"
-            height="65"
-            rx="6"
-            fill="url(#g1)"
-            stroke="#2d3a4a"
-            filter="url(#shadow)"
-          />
-          <text x="62" y="75" text-anchor="middle" fill="#4ecdc4" font-size="10" font-weight="700">
-            1
-          </text>
-          <text x="62" y="90" text-anchor="middle" fill="#e8ecf1" font-size="8">
-            Riel + bloque
-          </text>
-          <text x="62" y="110" text-anchor="middle" font-size="7">
-            rect. · desliz.
-          </text>
-          <path
-            d="M 105 90 L 120 90"
-            stroke="#e8a23c"
-            stroke-width="1.5"
-            fill="none"
-          />
-          <!-- 2 -->
-          <rect
-            x="120"
-            y="55"
-            width="85"
-            height="65"
-            rx="6"
-            fill="url(#g1)"
-            stroke="#2d3a4a"
-          />
-          <text x="162" y="75" text-anchor="middle" fill="#4ecdc4" font-size="10" font-weight="700">
-            2
-          </text>
-          <text x="162" y="90" text-anchor="middle" fill="#e8ecf1" font-size="8">
-            Peso
-          </text>
-          <text x="162" y="110" text-anchor="middle" font-size="7">caída libre</text>
-          <path d="M 205 90 L 220 90" stroke="#e8a23c" stroke-width="1.5" fill="none" />
-          <!-- 3 -->
-          <rect
-            x="220"
-            y="50"
-            width="85"
-            height="70"
-            rx="6"
-            fill="url(#g1)"
-            stroke="#2d3a4a"
-          />
-          <text x="262" y="72" text-anchor="middle" fill="#4ecdc4" font-size="10" font-weight="700">
-            3
-          </text>
-          <text x="262" y="86" text-anchor="middle" fill="#e8ecf1" font-size="7">
-            Rampa helicoidal
-          </text>
-          <text x="262" y="110" text-anchor="middle" font-size="7">acelerado</text>
-          <path d="M 305 90 L 320 90" stroke="#e8a23c" stroke-width="1.5" fill="none" />
-          <!-- 4 -->
-          <rect
-            x="320"
-            y="55"
-            width="85"
-            height="65"
-            rx="6"
-            fill="url(#g1)"
-            stroke="#2d3a4a"
-          />
-          <text x="362" y="75" text-anchor="middle" fill="#4ecdc4" font-size="10" font-weight="700">
-            4
-          </text>
-          <text x="362" y="90" text-anchor="middle" fill="#e8ecf1" font-size="8">Curva / pista</text>
-          <text x="362" y="110" text-anchor="middle" font-size="7">circular</text>
-          <path d="M 405 90 L 420 90" stroke="#e8a23c" stroke-width="1.5" fill="none" />
-          <!-- 5 -->
-          <rect
-            x="420"
-            y="48"
-            width="85"
-            height="72"
-            rx="6"
-            fill="url(#g1)"
-            stroke="#2d3a4a"
-          />
-          <text x="462" y="70" text-anchor="middle" fill="#4ecdc4" font-size="10" font-weight="700">
-            5
-          </text>
-          <text x="462" y="84" text-anchor="middle" fill="#e8ecf1" font-size="7">Péndulo</text>
-          <text x="462" y="100" text-anchor="middle" font-size="7">oscilatorio</text>
-          <text x="462" y="115" text-anchor="middle" font-size="7" fill="#4ecdc4">
-            ⟶ 6
-          </text>
-          <path d="M 505 90 L 520 90" stroke="#e8a23c" stroke-width="1.5" fill="none" />
-          <!-- 6 -->
-          <rect
-            x="520"
-            y="55"
-            width="85"
-            height="65"
-            rx="6"
-            fill="url(#g1)"
-            stroke="#2d3a4a"
-          />
-          <text x="562" y="75" text-anchor="middle" fill="#4ecdc4" font-size="10" font-weight="700">
-            6
-          </text>
-          <text x="562" y="90" text-anchor="middle" fill="#e8ecf1" font-size="8">Engrane / eje</text>
-          <text x="562" y="110" text-anchor="middle" font-size="7">rotacional</text>
-          <path d="M 605 90 L 625 90" stroke="#e8a23c" stroke-width="1.5" fill="none" />
-          <!-- 7 -->
-          <rect
-            x="625"
-            y="50"
-            width="75"
-            height="75"
-            rx="6"
-            fill="url(#g1)"
-            stroke="#e8a23c"
-            stroke-width="1.2"
-          />
-          <text x="662" y="72" text-anchor="middle" fill="#4ecdc4" font-size="10" font-weight="700">
-            7
-          </text>
-          <text x="662" y="86" text-anchor="middle" fill="#e8ecf1" font-size="7">Resort·reb·parab.</text>
+
+        <g fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#shadow)">
+          <path d="M 52 96 L 248 126" stroke="url(#track)" stroke-width="11" />
+          <path d="M 248 126 L 248 202" stroke="#8b9aab" stroke-width="10" />
+          <path d="M 248 202 L 405 242" stroke="url(#track)" stroke-width="11" />
+          <path d="M 405 242 C 445 280 500 280 536 244" stroke="url(#track)" stroke-width="11" />
+          <path d="M 558 244 L 650 248" stroke="#8b9aab" stroke-width="8" />
+          <path d="M 714 254 C 744 188 788 188 818 242" stroke="#e8a23c" stroke-width="2" stroke-dasharray="6 6" />
         </g>
-        <!-- LED -->
-        <g transform="translate(0,0)">
-          <circle cx="678" cy="200" r="12" fill="#1a3d2e" stroke="#4ecdc4" stroke-width="2" />
-          <text x="678" y="204" text-anchor="middle" fill="#4ecdc4" font-size="8" font-weight="700">
-            LED
-          </text>
+
+        <g fill="#e8a23c" stroke="#0f1419" stroke-width="3">
+          <circle cx="72" cy="96" r="10" />
+          <circle cx="248" cy="202" r="10" />
+          <circle cx="536" cy="244" r="10" />
+          <circle cx="650" cy="248" r="10" />
+          <circle cx="818" cy="242" r="10" />
         </g>
+
+        <g font-family="Segoe UI, sans-serif">
+          <rect x="218" y="74" width="42" height="44" rx="6" fill="url(#metal)" />
+          <line x1="239" y1="50" x2="239" y2="74" stroke="#8b9aab" stroke-width="3" />
+          <text x="294" y="118" fill="#4ecdc4" font-size="12" font-weight="700">2. caída libre vertical</text>
+
+          <line x1="536" y1="96" x2="536" y2="210" stroke="#8b9aab" stroke-width="5" />
+          <circle cx="536" cy="96" r="9" fill="#4ecdc4" />
+          <circle cx="536" cy="244" r="24" fill="#4ecdc4" opacity="0.95" />
+
+          <circle cx="650" cy="248" r="30" fill="none" stroke="#4ecdc4" stroke-width="8" stroke-dasharray="12 8" />
+          <circle cx="650" cy="248" r="8" fill="#4ecdc4" />
+          <path d="M 690 254 h86" stroke="#e8a23c" stroke-width="5" stroke-dasharray="5 9" />
+          <rect x="812" y="230" width="50" height="24" rx="12" fill="#1a222d" stroke="#2d3a4a" />
+          <circle cx="850" cy="242" r="9" fill="#4ecdc4" />
+          <circle cx="878" cy="242" r="13" fill="#1a3d2e" stroke="#4ecdc4" stroke-width="3" />
+        </g>
+
+        <g font-family="Segoe UI, sans-serif" font-size="11" fill="#e8ecf1">
+          <text x="52" y="70" fill="#4ecdc4" font-weight="700">1</text>
+          <text x="72" y="70">riel rectilíneo + deslizante</text>
+          <text x="252" y="230" fill="#4ecdc4" font-weight="700">3</text>
+          <text x="274" y="230">rampa descendente acelerada</text>
+          <text x="430" y="304" fill="#4ecdc4" font-weight="700">4</text>
+          <text x="452" y="304">curva/canal circular</text>
+          <text x="488" y="82" fill="#4ecdc4" font-weight="700">5</text>
+          <text x="510" y="82">choque al péndulo</text>
+          <text x="610" y="200" fill="#4ecdc4" font-weight="700">6</text>
+          <text x="632" y="200">engrane rotacional</text>
+          <text x="690" y="282" fill="#4ecdc4" font-weight="700">7</text>
+          <text x="712" y="282">resorte, rebote y arco parabólico → LED</text>
+        </g>
+
         <path
-          d="M 662 150 L 678 186"
+          d="M 62 328 H 840"
           stroke="#e8a23c"
-          stroke-width="1.2"
+          stroke-width="1"
           fill="none"
-          stroke-dasharray="3 2"
+          stroke-dasharray="4 5"
         />
-        <text x="600" y="240" text-anchor="middle" fill="#8b9aab" font-size="8">
-          Tipos: ≥8 a lo largo de la cadena (incl. MAS, rebote, parabólico al final)
-        </text>
-        <text x="360" y="260" text-anchor="middle" fill="#6b7a8a" font-size="8">
-          Línea punteada: energía / acción hacia el interruptor
+        <text x="450" y="346" text-anchor="middle" fill="#8b9aab" font-size="11">
+          La ruta coincide con la simulación JS: contactos visibles y transiciones sin saltos.
         </text>
       </svg>
     </div>
 
     <h2>Leyenda por paso</h2>
     <ul class="diagram-legend" style="list-style: none; padding: 0">
-      <li><strong>1</strong> — Rectilíneo + deslizante (riel)</li>
-      <li><strong>2</strong> — Caída libre (peso)</li>
-      <li><strong>3</strong> — Acelerado en rampa</li>
-      <li><strong>4</strong> — Trayectoria circular (curva de pista)</li>
-      <li><strong>5</strong> — Oscilatorio (péndulo)</li>
-      <li><strong>6</strong> — Rotacional (engranaje / eje)</li>
+      <li><strong>1</strong> — Rectilíneo + deslizante: la canica avanza por el riel inicial.</li>
+      <li><strong>2</strong> — Caída libre: la canica baja casi verticalmente por la guía.</li>
+      <li><strong>3</strong> — Acelerado en rampa: desciende y gana rapidez.</li>
+      <li><strong>4</strong> — Movimiento circular: el canal curvo redirige la canica hacia el péndulo.</li>
+      <li><strong>5</strong> — Oscilatorio: el impacto mueve el péndulo.</li>
+      <li><strong>6</strong> — Rotacional: la transferencia acciona el engrane.</li>
       <li>
-        <strong>7</strong> — Armónico simple (muelle) + rebote + parabólico → interruptor/LED
+        <strong>7</strong> — Armónico simple (resorte) + rebote + parabólico → interruptor/LED.
       </li>
     </ul>
   </main>

@@ -1,9 +1,36 @@
+.flow-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
+
+.flow-summary article {
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(78, 205, 196, 0.28);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(circle at 90% 10%, rgba(78, 205, 196, 0.12), transparent 36%),
+    var(--surface);
+}
+
+.flow-summary strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--accent2);
+}
+
+.flow-summary span {
+  color: var(--muted);
+}
+
 .explain-block {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1rem 1.1rem;
   margin-bottom: 1rem;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
 }
 
 .explain-block h3 {
@@ -19,4 +46,10 @@ ul.check {
 }
 ul.check li {
   margin-bottom: 0.35rem;
+}
+
+@media (max-width: 700px) {
+  .flow-summary {
+    grid-template-columns: 1fr;
+  }
 }
